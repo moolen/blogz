@@ -185,7 +185,7 @@ function readBlogSync(opts) {
     // sort the posts by chronological order
     posts = posts.filter(function(post) {
         // only return blog posts that have passed their 'date' (ie. published)
-        return post.meta.date < now;
+        return post.meta.date <= now;
     }).sort(function(a, b) {
         // sort on date
         if ( a.meta.date.toISOString() < b.meta.date.toISOString() )
